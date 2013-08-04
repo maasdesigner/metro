@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Metro</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag  "application"  %>
+  <%= csrf_meta_tags %>
+
+  <script type="text/javascript">
+      var get_height = window.innerHeight;
+      var get_height1 =  get_height - 25;
+      var get_container = document.getElementById('container');
+      get_container.style.height =  get_height1 + 'px';
+  </script>
+
+  <script>
+      $("#foo3").carouFredSel({
+          items: 1,
+          auto: true,
+          scroll: 1,
+          pagination  : "#foo3_pag"
+      });
+  </script>
+
+
+
+
+<script type="text/javascript">
+    WebFontConfig = { fontdeck: { id: '29917' } };
+
+    (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+    })();
+</script>
+
+</head>
+
+<body>
+
+<%= yield %>
+
+
+
+
+
+</body>
+</html>
